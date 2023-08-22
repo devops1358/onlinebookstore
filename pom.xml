@@ -48,6 +48,11 @@
 					<warSourceDirectory>WebContent</warSourceDirectory>
 				</configuration>
 			</plugin>
+			<plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.7.0.1746</version>
+      </plugin>
 		</plugins>
 	</build>
 	<dependencies>
@@ -71,5 +76,17 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 		</dependency>
+		<distributionManagement>
+<repository>
+<id>releases</id>
+<name>releases</name>
+<url>http://localhost:8081/repository/onlinebookstore_releases/</url>
+</repository>
+<snapshotRepository>
+<id>snapshots</id>
+<name>snapshots</name>
+<url>http://localhost:8081/repository/onlinebookstore_snapshots/</url>
+</snapshotRepository>
+</distributionManagement>
 	</dependencies>
 </project>
